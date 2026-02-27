@@ -1,21 +1,21 @@
 import { useRouter } from 'expo-router';
 import {
-    ArrowLeft,
-    Clock,
-    MapPin,
-    Minus,
-    Plus,
-    ShoppingBag,
-    Trash2
+  ArrowLeft,
+  Clock,
+  MapPin,
+  Minus,
+  Plus,
+  ShoppingBag,
+  Trash2
 } from 'lucide-react-native';
 import React, { useState } from 'react';
 import {
-    Image,
-    ScrollView,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View
+  Image,
+  ScrollView,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -92,7 +92,7 @@ export default function CartScreen() {
                 </View>
                 <View className="mt-3 pt-3 border-t border-gray-100 flex-row items-center">
                   <Clock size={14} color="#F59E0B" className="mr-1" />
-                  <Text className="text-xs text-gray-500">
+                  <Text className="text-xs text-gray-500 ml-1">
                     Ready for pickup in <Text className="font-bold text-gray-900">15 mins</Text>
                   </Text>
                 </View>

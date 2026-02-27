@@ -1,6 +1,6 @@
 import BottomNav from '@/src/components/BottomNav';
 import { useRouter } from 'expo-router';
-import { ArrowRight, MapPin, Search, ShoppingCart } from 'lucide-react-native';
+import { ArrowRight, MapPin, Search } from 'lucide-react-native';
 import React from 'react';
 import {
   ScrollView,
@@ -91,12 +91,12 @@ export default function HomeScreen() {
                 <MapPin size={16} color="#059669" />
               </View>
             </View>
-            <TouchableOpacity onPress={() => router.push('/cart')} className="bg-gray-50 p-2 rounded-full border border-gray-100 relative">
+            {/* <TouchableOpacity onPress={() => router.push('/cart')} className="bg-gray-50 p-2 rounded-full border border-gray-100 relative">
               <ShoppingCart size={22} color="#374151" />
               <View className="absolute -top-1 -right-1 bg-red-500 h-4 w-4 rounded-full items-center justify-center border border-white">
                 <Text className="text-[9px] text-white font-bold">2</Text>
               </View>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
           </View>
 
           {/* INDEX 1: STICKY SEARCH BAR */}

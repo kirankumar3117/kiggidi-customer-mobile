@@ -56,7 +56,7 @@ export default function LoginScreen() {
         setStep('DETAILS');
       } else {
         // EXISTING USER -> Go Home
-        router.replace('/(tabs)'); // Assuming you have tabs set up, or just '/'
+        router.replace('/');
       }
     }, 1500);
   };
@@ -134,23 +134,25 @@ export default function LoginScreen() {
                 By continuing, you agree to our Terms of Service & Privacy Policy.
               </Text>
 
-              {/* Divider */}
+              {/*
+              // Divider
               <View className="flex-row items-center my-8">
                 <View className="flex-1 h-[1px] bg-gray-100" />
                 <Text className="mx-4 text-gray-400 text-xs uppercase">Or login with</Text>
                 <View className="flex-1 h-[1px] bg-gray-100" />
               </View>
 
-              {/* Social Login Options */}
+              // Social Login Options
               <View className="flex-row gap-4 justify-center">
                 <TouchableOpacity className="bg-white border border-gray-200 p-4 rounded-xl shadow-sm">
                   <Mail size={24} color="#EA4335" />
                 </TouchableOpacity>
                 <TouchableOpacity className="bg-white border border-gray-200 p-4 rounded-xl shadow-sm">
-                   {/* Google G logo usually goes here */}
+                   // Google G logo usually goes here
                    <Text className="text-xl font-bold text-gray-800">G</Text>
                 </TouchableOpacity>
               </View>
+              */}
             </View>
           )}
 
