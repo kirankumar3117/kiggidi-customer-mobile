@@ -1,4 +1,3 @@
-import BottomNav from '@/src/components/BottomNav';
 import { useRouter } from 'expo-router';
 import { ArrowRight, MapPin, Search } from 'lucide-react-native';
 import React from 'react';
@@ -12,57 +11,57 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 // 1. DATA ARRAY (Easy to Scale)
 const CATEGORIES = [
-  { 
-    id: '1', 
-    name: 'Groceries', 
-    subtitle: 'Rice, Atta, Dals', 
-    icon: '🥦', 
-    bg: 'bg-emerald-50', 
+  {
+    id: '1',
+    name: 'Groceries',
+    subtitle: 'Rice, Atta, Dals',
+    icon: '🥦',
+    bg: 'bg-emerald-50',
     border: 'border-emerald-100',
-    text: 'text-emerald-900' 
+    text: 'text-emerald-900'
   },
-  { 
-    id: '2', 
-    name: 'Snacks', 
-    subtitle: 'Chips, Biscuits', 
-    icon: '🍟', 
-    bg: 'bg-orange-50', 
+  {
+    id: '2',
+    name: 'Snacks',
+    subtitle: 'Chips, Biscuits',
+    icon: '🍟',
+    bg: 'bg-orange-50',
     border: 'border-orange-100',
     text: 'text-orange-900'
   },
-  { 
-    id: '3', 
-    name: 'Cool Drinks', 
-    subtitle: 'Juices, Sodas', 
-    icon: '🥤', 
-    bg: 'bg-pink-50', 
+  {
+    id: '3',
+    name: 'Cool Drinks',
+    subtitle: 'Juices, Sodas',
+    icon: '🥤',
+    bg: 'bg-pink-50',
     border: 'border-pink-100',
     text: 'text-pink-900'
   },
-  { 
-    id: '4', 
-    name: 'Dairy', 
-    subtitle: 'Milk, Curd, Ghee', 
-    icon: '🥛', 
-    bg: 'bg-blue-50', 
+  {
+    id: '4',
+    name: 'Dairy',
+    subtitle: 'Milk, Curd, Ghee',
+    icon: '🥛',
+    bg: 'bg-blue-50',
     border: 'border-blue-100',
     text: 'text-blue-900'
   },
-  { 
-    id: '5', 
-    name: 'Vegetables', 
-    subtitle: 'Farm Fresh', 
-    icon: '🥕', 
-    bg: 'bg-green-50', 
+  {
+    id: '5',
+    name: 'Vegetables',
+    subtitle: 'Farm Fresh',
+    icon: '🥕',
+    bg: 'bg-green-50',
     border: 'border-green-100',
     text: 'text-green-900'
   },
-  { 
-    id: '6', 
-    name: 'Cleaning', 
-    subtitle: 'Soaps, Detergent', 
-    icon: '🧹', 
-    bg: 'bg-purple-50', 
+  {
+    id: '6',
+    name: 'Cleaning',
+    subtitle: 'Soaps, Detergent',
+    icon: '🧹',
+    bg: 'bg-purple-50',
     border: 'border-purple-100',
     text: 'text-purple-900'
   },
@@ -74,14 +73,14 @@ export default function HomeScreen() {
   return (
     <View className="flex-1 bg-white">
       <SafeAreaView className="flex-1" edges={['top', 'left', 'right']}>
-        
+
         {/* STICKY HEADER SCROLLVIEW */}
-        <ScrollView 
-          className="flex-1" 
+        <ScrollView
+          className="flex-1"
           showsVerticalScrollIndicator={false}
-          stickyHeaderIndices={[1]} 
+          stickyHeaderIndices={[1]}
         >
-          
+
           {/* INDEX 0: HEADER */}
           <View className="px-4 py-3 flex-row items-center justify-between bg-white mb-2">
             <View>
@@ -101,7 +100,7 @@ export default function HomeScreen() {
 
           {/* INDEX 1: STICKY SEARCH BAR */}
           <View className="px-4 pb-4 bg-white z-50 shadow-sm shadow-gray-100/50">
-            <TouchableOpacity 
+            <TouchableOpacity
               activeOpacity={0.9}
               onPress={() => router.push('/search')}
               className="bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 flex-row items-center"
@@ -113,7 +112,7 @@ export default function HomeScreen() {
 
           {/* INDEX 2: MAIN CONTENT */}
           <View className="px-4 pb-24 pt-2">
-            
+
             {/* CAROUSEL (Discounts) */}
             <View className="mb-8">
               <Text className="text-lg font-bold text-gray-900 mb-3">Discounts Today</Text>
@@ -121,14 +120,14 @@ export default function HomeScreen() {
                 {/* Abstract Shapes */}
                 <View className="absolute right-0 top-0 bottom-0 w-32 bg-gray-800 skew-x-12 opacity-50" />
                 <View className="absolute -right-10 -bottom-10 w-40 h-40 bg-gray-700 rounded-full opacity-30" />
-                
+
                 <View className="z-10">
                   <View className="bg-yellow-400 self-start px-2 py-1 rounded mb-2">
                     <Text className="text-xs font-bold text-black uppercase">Limited Time</Text>
                   </View>
                   <Text className="text-white text-3xl font-extrabold">50% OFF</Text>
                   <Text className="text-gray-300 font-medium text-base mb-3">On Household Items</Text>
-                  
+
                   <TouchableOpacity className="flex-row items-center">
                     <Text className="text-white font-bold text-sm mr-1">Shop Now</Text>
                     <ArrowRight size={14} color="white" />
@@ -143,10 +142,10 @@ export default function HomeScreen() {
                 <Text className="text-xl font-bold text-gray-900">Explore by Category</Text>
                 <Text className="text-emerald-600 font-bold text-sm">See all</Text>
               </View>
-              
+
               <View className="flex-row flex-wrap justify-between gap-y-4">
                 {CATEGORIES.map((cat) => (
-                  <TouchableOpacity 
+                  <TouchableOpacity
                     key={cat.id}
                     activeOpacity={0.8}
                     // DYNAMIC STYLING based on category color
@@ -176,8 +175,6 @@ export default function HomeScreen() {
           </View>
         </ScrollView>
 
-        {/* BOTTOM NAVIGATION */}
-        <BottomNav />
       </SafeAreaView>
     </View>
   );

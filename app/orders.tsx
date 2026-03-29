@@ -1,40 +1,40 @@
 import { useRouter } from 'expo-router';
 import {
-    CheckCircle,
-    MapPin,
-    Phone,
-    ShoppingBag
+  CheckCircle,
+  MapPin,
+  Phone,
+  ShoppingBag
 } from 'lucide-react-native';
 import React, { useState } from 'react';
 import {
-    ScrollView,
-    Switch,
-    Text,
-    TouchableOpacity,
-    View
+  ScrollView,
+  Switch,
+  Text,
+  TouchableOpacity,
+  View
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function OrdersScreen() {
   const router = useRouter();
-  
+
   // MOCK STATE (Toggle to see Empty vs Active Orders)
   const [hasOrders, setHasOrders] = useState(true);
 
   return (
     <View className="flex-1 bg-gray-50">
       <SafeAreaView className="flex-1">
-        
+
         {/* --- HEADER --- */}
         <View className="px-5 py-4 bg-white border-b border-gray-100 flex-row justify-between items-center">
           <Text className="text-xl font-bold text-gray-900">My Orders</Text>
-          
+
           {/* DEV TOGGLE */}
           <View className="flex-row items-center gap-2 bg-gray-100 px-2 py-1 rounded">
             <Text className="text-[10px] text-gray-500 font-bold">HAS ORDERS:</Text>
-            <Switch 
-              value={hasOrders} 
-              onValueChange={setHasOrders} 
+            <Switch
+              value={hasOrders}
+              onValueChange={setHasOrders}
               trackColor={{ false: "#D1D5DB", true: "#10B981" }}
               thumbColor={"#FFFFFF"}
             />
@@ -42,7 +42,7 @@ export default function OrdersScreen() {
         </View>
 
         <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
-          
+
           {/* ============================================================
              SCENARIO A: NO ORDERS (Empty State)
              Focus: "Start Shopping"
@@ -56,7 +56,7 @@ export default function OrdersScreen() {
               <Text className="text-gray-500 text-center mb-8">
                 You haven't placed any orders yet. Start adding items from your favorite kirana store.
               </Text>
-              <TouchableOpacity 
+              <TouchableOpacity
                 onPress={() => router.push('/')}
                 className="bg-emerald-600 px-8 py-3 rounded-xl shadow-lg shadow-emerald-200"
               >
@@ -64,18 +64,18 @@ export default function OrdersScreen() {
               </TouchableOpacity>
             </View>
           ) : (
-            
-          /* ============================================================
-             SCENARIO B: ACTIVE ORDERS LIST
-             Focus: OTP & Live Status
-             ============================================================ */
+
+            /* ============================================================
+               SCENARIO B: ACTIVE ORDERS LIST
+               Focus: OTP & Live Status
+               ============================================================ */
             <View className="p-4 pb-20">
-              
+
               {/* 1. LIVE ORDER CARD (High Priority) */}
               <Text className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3 ml-1">
                 Live Orders
               </Text>
-              
+
               <View className="bg-white rounded-2xl p-4 border border-emerald-100 shadow-sm mb-6 relative overflow-hidden">
                 {/* Status Badge */}
                 <View className="absolute top-0 right-0 bg-yellow-100 px-3 py-1 rounded-bl-xl">
@@ -85,7 +85,7 @@ export default function OrdersScreen() {
                 {/* Shop Info */}
                 <View className="flex-row items-center mb-4">
                   <View className="h-10 w-10 bg-gray-100 rounded-lg mr-3 items-center justify-center">
-                     <Text className="text-xl">🏪</Text>
+                    <Text className="text-xl">🏪</Text>
                   </View>
                   <View>
                     <Text className="text-base font-bold text-gray-900">Sri Lakshmi Kirana</Text>
@@ -100,8 +100,8 @@ export default function OrdersScreen() {
                     <Text className="text-2xl font-black text-emerald-900 tracking-widest">8492</Text>
                   </View>
                   <View className="items-end">
-                     <Text className="text-[10px] text-emerald-600 mb-1">Show this at shop</Text>
-                     <CheckCircle size={20} color="#059669" />
+                    <Text className="text-[10px] text-emerald-600 mb-1">Show this at shop</Text>
+                    <CheckCircle size={20} color="#059669" />
                   </View>
                 </View>
 
@@ -128,17 +128,17 @@ export default function OrdersScreen() {
 
               {[1, 2, 3].map((order, i) => (
                 <View key={i} className="bg-white rounded-xl p-4 border border-gray-100 mb-3 flex-row items-center">
-                   <View className="h-12 w-12 bg-gray-50 rounded-lg items-center justify-center mr-3">
-                      <CheckCircle size={24} color="#9CA3AF" />
-                   </View>
-                   <View className="flex-1">
-                      <Text className="text-sm font-bold text-gray-900">Delivered • Yesterday</Text>
-                      <Text className="text-xs text-gray-500 mt-0.5">Sri Lakshmi Kirana</Text>
-                      <Text className="text-xs text-gray-900 font-bold mt-1">₹120.00</Text>
-                   </View>
-                   <TouchableOpacity className="bg-emerald-50 px-3 py-1.5 rounded-lg">
-                      <Text className="text-emerald-700 font-bold text-xs">Reorder</Text>
-                   </TouchableOpacity>
+                  <View className="h-12 w-12 bg-gray-50 rounded-lg items-center justify-center mr-3">
+                    <CheckCircle size={24} color="#9CA3AF" />
+                  </View>
+                  <View className="flex-1">
+                    <Text className="text-sm font-bold text-gray-900">Delivered • Yesterday</Text>
+                    <Text className="text-xs text-gray-500 mt-0.5">Sri Lakshmi Kirana</Text>
+                    <Text className="text-xs text-gray-900 font-bold mt-1">₹120.00</Text>
+                  </View>
+                  <TouchableOpacity className="bg-emerald-50 px-3 py-1.5 rounded-lg">
+                    <Text className="text-emerald-700 font-bold text-xs">Reorder</Text>
+                  </TouchableOpacity>
                 </View>
               ))}
 
