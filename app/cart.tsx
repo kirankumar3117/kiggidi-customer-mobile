@@ -150,7 +150,7 @@ export default function CartScreen() {
               </View>
 
               {/* 3. BILL DETAILS */}
-              <View className="bg-white p-4 mb-32 border-y border-gray-100">
+              <View className="bg-white p-4 mb-40 border-y border-gray-100">
                 <Text className="text-base font-bold text-gray-900 mb-4">Bill Details</Text>
                 
                 <View className="flex-row justify-between mb-2">
@@ -179,7 +179,7 @@ export default function CartScreen() {
             </ScrollView>
 
             {/* 4. STICKY PAYMENT FOOTER */}
-            <View className="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 pb-8 shadow-lg">
+            <View className="absolute bottom-20 left-0 right-0 bg-white border-t border-gray-200 p-4 pb-8 shadow-lg">
               <View className="flex-row items-center gap-4">
                 <View className="bg-white border border-green-200 rounded-lg p-2">
                    <Text className="text-[10px] text-green-700 font-bold uppercase">Cash on Pickup</Text>
