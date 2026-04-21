@@ -2,10 +2,12 @@ import { useRouter, usePathname } from 'expo-router';
 import { Home, ShoppingBag, User, ShoppingCart } from 'lucide-react-native';
 import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
+import { useTranslation } from 'react-i18next';
 
 export default function BottomNav() {
   const router = useRouter();
   const pathname = usePathname();
+  const { t } = useTranslation();
 
   const isActive = (path: string) => pathname === path;
 
@@ -22,7 +24,7 @@ export default function BottomNav() {
       <TouchableOpacity onPress={() => handleNavigation('/')} className="items-center w-16">
         <Home size={24} color={isActive('/') ? '#059669' : '#9CA3AF'} />
         <Text className={`text-[10px] font-bold mt-1 ${isActive('/') ? 'text-emerald-600' : 'text-gray-400'}`}>
-          Home
+          {t('nav.home')}
         </Text>
       </TouchableOpacity>
 
@@ -30,7 +32,7 @@ export default function BottomNav() {
       <TouchableOpacity onPress={() => handleNavigation('/orders')} className="items-center w-16">
         <ShoppingBag size={24} color={isActive('/orders') ? '#059669' : '#9CA3AF'} />
         <Text className={`text-[10px] font-bold mt-1 ${isActive('/orders') ? 'text-emerald-600' : 'text-gray-400'}`}>
-          Orders
+          {t('nav.orders')}
         </Text>
       </TouchableOpacity>
 
@@ -38,7 +40,7 @@ export default function BottomNav() {
       <TouchableOpacity onPress={() => handleNavigation('/profile')} className="items-center w-16">
         <User size={24} color={isActive('/profile') ? '#059669' : '#9CA3AF'} />
         <Text className={`text-[10px] font-bold mt-1 ${isActive('/profile') ? 'text-emerald-600' : 'text-gray-400'}`}>
-          Profile
+          {t('nav.profile')}
         </Text>
       </TouchableOpacity>
 
@@ -52,7 +54,7 @@ export default function BottomNav() {
           </View>
         </View>
         <Text className={`text-[10px] font-bold mt-1 ${isActive('/cart') ? 'text-emerald-600' : 'text-gray-800'}`}>
-          Cart
+          {t('nav.cart')}
         </Text>
       </TouchableOpacity>
 

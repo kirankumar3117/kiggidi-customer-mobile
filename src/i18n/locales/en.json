@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "home": "Home",
+    "orders": "Orders",
+    "profile": "Profile",
+    "cart": "Cart"
+  },
+  "profile": {
+    "title": "Profile",
+    "unlock_full_experience": "Unlock the Full Experience",
+    "login_desc": "Log in to save your delivery address, track your live orders, and get exclusive discounts.",
+    "login_btn": "Login or Signup",
+    "logout": "Log Out",
+    "support": "Support",
+    "app_language": "App Language",
+    "app_language_desc": "Select language",
+    "my_activity": "My Activity",
+    "your_orders": "Your Orders",
+    "address_book": "Address Book",
+    "favorite_shops": "Favorite Shops"
+  }
+}

@@ -1,4 +1,5 @@
 import '@/global.css'; // Import Tailwind
+import '@/src/i18n'; // Initialize i18n
 import BottomNav from '@/src/components/BottomNav';
 import { Stack, usePathname } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';

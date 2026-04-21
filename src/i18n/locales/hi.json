@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "home": "होम",
+    "orders": "ऑर्डर्स",
+    "profile": "प्रोफ़ाइल",
+    "cart": "कार्ट"
+  },
+  "profile": {
+    "title": "प्रोफ़ाइल",
+    "unlock_full_experience": "पूरी सुविधा का लाभ उठाएं",
+    "login_desc": "अपना डिलीवरी पता सहेजने और ऑर्डर ट्रैक करने के लिए लॉग इन करें।",
+    "login_btn": "लॉग इन या साइनअप",
+    "logout": "लॉग आउट",
+    "support": "सहायता",
+    "app_language": "ऐप भाषा",
+    "app_language_desc": "भाषा चुनें",
+    "my_activity": "मेरी गतिविधि",
+    "your_orders": "आपके आदेश",
+    "address_book": "पता पुस्तिका",
+    "favorite_shops": "पसंदीदा दुकानें"
+  }
+}
