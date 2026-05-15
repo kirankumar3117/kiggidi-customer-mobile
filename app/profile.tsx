@@ -1,5 +1,6 @@
 import { useRouter } from 'expo-router';
 import {
+    ArrowLeft,
     ChevronRight,
     Headphones,
     Heart,
@@ -32,7 +33,12 @@ export default function ProfileScreen() {
         
         {/* --- HEADER --- */}
         <View className="px-5 py-4 bg-white border-b border-gray-100 flex-row justify-between items-center">
-          <Text className="text-xl font-bold text-gray-900">Profile</Text>
+          <View className="flex-row items-center gap-3">
+            <TouchableOpacity onPress={() => router.back()} className="p-1">
+              <ArrowLeft size={24} color="#111827" />
+            </TouchableOpacity>
+            <Text className="text-xl font-bold text-gray-900">Profile</Text>
+          </View>
           
           {/* DEV ONLY: Toggle to test views */}
           <View className="flex-row items-center gap-2 bg-gray-100 px-2 py-1 rounded">
@@ -121,7 +127,7 @@ export default function ProfileScreen() {
                     icon={<MapPin size={20} color="#059669" />} 
                     label="Address Book" 
                     subLabel="Manage delivery locations"
-                    onClick={() => {}} // Navigate to addresses
+                    onClick={() => router.push('/addresses')}
                   />
                   <Divider />
 
